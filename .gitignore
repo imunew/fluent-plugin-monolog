@@ -1,0 +1,17 @@
+~*
+#*
+*~
+[._]*.s[a-w][a-z]
+.DS_Store
+/.bundle/
+/.yardoc
+/Gemfile.lock
+/_yardoc/
+/coverage/
+/doc/
+/pkg/
+/spec/reports/
+/tmp/
+/.idea/
+/*.iml
+/vendor/
