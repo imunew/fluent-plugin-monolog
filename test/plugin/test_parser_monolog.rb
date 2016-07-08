@@ -13,7 +13,7 @@ class MonologParserTest < ::Test::Unit::TestCase
     @expected = {
         'channel' => 'example',
         'context' => JSON.parse("{\"message\":\"foo bar\"}"),
-        'extra'   => '',
+        'extra'   => JSON.parse("[]"),
         'level'   => 'DEBUG',
         'message' => 'stream'
     }
