@@ -5,7 +5,7 @@ module Fluent
     class MonologParser < Parser
       Fluent::Plugin.register_parser('monolog', self)
 
-      REGEXP = /^\[(?<time>[\d\-]+ [\d\:]+)\] (?<channel>.+)\.(?<level>(DEBUG|INFO|NOTICE|WARNING|ERROR|CRITICAL|ALERT|EMERGENCY))\: (?<message>.*) (?<context>\{.+\}) \[(?<extra>.*)\]$/
+      REGEXP = /^\[(?<time>[\d\-]+ [\d\:]+)\] (?<channel>.+)\.(?<level>(DEBUG|INFO|NOTICE|WARNING|ERROR|CRITICAL|ALERT|EMERGENCY))\: (?<message>[^\{\}]*) (?<context>\{.+\}) \[(?<extra>.*)\]$/
       TIME_FORMAT = "%Y-%m-%d %H:%M:%S"
 
       def initialize
