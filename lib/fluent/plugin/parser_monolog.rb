@@ -32,7 +32,7 @@ module Fluent
         level = m['level']
         message = m['message']
         context = JSON.parse(m['context'])
-        extra = m['extra']
+        extra = JSON.parse(m['extra'])
 
         record = {
             "channel" => channel,
