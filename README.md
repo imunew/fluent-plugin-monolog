@@ -2,29 +2,36 @@
 
 [![Build Status](https://travis-ci.org/imunew/fluent-plugin-monolog.svg?branch=master)](https://travis-ci.org/imunew/fluent-plugin-monolog)
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/fluent/plugin/monolog`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Put your Ruby code in the file `lib/fluent/plugin/monolog`. 
+To experiment with that code, run `bin/console` for an interactive prompt.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Install via `td-agent-gem`.
 
-```ruby
-gem 'fluent-plugin-monolog'
+```bash
+$ td-agent-gem install fluent-plugin-monolog
 ```
 
-And then execute:
+We have an example for this plugin, so please use it.
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install fluent-plugin-monolog
+- [fluent-plugin-monolog-example](https://github.com/imunew/fluent-plugin-monolog-example)
 
 ## Usage
 
-TODO: Write usage instructions here
+After installed, please add configurations of [in_tail(tail Input Plugin)](http://docs.fluentd.org/v0.12/articles/in_tail) to `td-agent.conf`, like below.
+
+```
+# /etc/td-agent/td-agent.conf
+
+<source>
+  @type tail
+  path /path/to/example.log
+  format monolog
+  pos_file /path/to/example.log.pos
+  tag example.stream
+</source>
+```
 
 ## Development
 
