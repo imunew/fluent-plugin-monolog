@@ -1,3 +1,4 @@
+require 'fluent/parser'
 require 'json'
 
 module Fluent
