@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "fluent-plugin-monolog"
-  spec.version       = "0.1.7"
+  spec.version       = "0.1.8"
   spec.authors       = ["imunew"]
   spec.email         = ["imunew@gmail.com"]
 
@@ -29,6 +29,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.12"
   spec.add_development_dependency "rake"
   spec.add_development_dependency "test-unit", "~> 3.1"
-  spec.add_runtime_dependency "fluentd", [">= 0.12.0", "< 0.14"]
+  spec.add_runtime_dependency "fluentd", "~> 0.12.0"
 
 end
