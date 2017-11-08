@@ -19,7 +19,7 @@ We have an example for this plugin, so please use it.
 
 ## Usage
 
-After installed, please add configurations of [in_tail(tail Input Plugin)](http://docs.fluentd.org/v0.12/articles/in_tail) to `td-agent.conf`, like below.
+After installed, please add configurations of [in_tail(tail Input Plugin)](https://docs.fluentd.org/v0.14/articles/in_tail) to `td-agent.conf`, like below.
 
 ```
 # /etc/td-agent/td-agent.conf
