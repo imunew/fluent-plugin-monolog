@@ -23,9 +23,9 @@ class MonologParserTest < ::Test::Unit::TestCase
       assert_equal(event_time('2016-07-06 15:21:21', format: '%Y-%m-%d %H:%M:%S'), time)
       assert_equal(@expected, record)
     }
-    assert_equal(Fluent::TextParser::MonologParser::REGEXP,
+    assert_equal(Fluent::Plugin::TextParser::MonologParser::REGEXP,
                  @parser.instance.patterns['format'])
-    assert_equal(Fluent::TextParser::MonologParser::TIME_FORMAT,
+    assert_equal(Fluent::Plugin::TextParser::MonologParser::TIME_FORMAT,
                  @parser.instance.patterns['time_format'])
   end
 end
