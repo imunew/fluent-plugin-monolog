@@ -1,5 +1,4 @@
 require 'helper'
-require 'fluent/test/driver/parser'
 require 'fluent/test/helpers'
 require 'fluent/plugin/parser_monolog'
 require 'json'
