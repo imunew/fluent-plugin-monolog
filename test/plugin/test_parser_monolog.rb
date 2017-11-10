@@ -1,4 +1,5 @@
-require 'helper'
+require_relative '../helper'
+require 'fluent/test/driver/parser'
 require 'fluent/test/helpers'
 require 'fluent/plugin/parser_monolog'
 require 'json'
@@ -8,7 +9,7 @@ include Fluent::Test::Helpers
 class MonologParserTest < ::Test::Unit::TestCase
   def setup
     Fluent::Test.setup
-    @parser = Fluent::Test::ParserTestDriver.new(Fluent::Plugin.new_parser('monolog'))
+    @parser = Fluent::Test::Driver::Parser.new(Fluent::Plugin.new_parser('monolog'))
     @expected = {
         'channel' => 'example',
         'context' => JSON.parse("{\"message\":\"foo bar\"}"),
